@@ -2,7 +2,12 @@ Start celery:
 
 python manage.py celeryd --setting=settings
 
-Kill celery:
+Can also be started with
+
+python manage.py supervisor
+
+
+Kill celery processes if hung:
 
 ps ax | grep celery | cut -b1-5 | xargs kill -9 
 
