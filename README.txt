@@ -1,8 +1,19 @@
+A basic Django project set up with Celery and Django-Supervisor
+===============================================================
+
 Start celery:
+
+python manage.py supervisor
+
+Stop celery:
+
+python manage.py supervisor stop celeryd celerycam celerybeat
+
+Manually start celery:
 
 python manage.py celeryd --setting=settings
 
-Kill celery:
+Manually kill celery processes if hung:
 
 ps ax | grep celery | cut -b1-5 | xargs kill -9 
 
